@@ -1,4 +1,4 @@
-(Some Figures take time to load)
+(🕙Some Figures take time to load)
 # 🌟Q1:
 
 - In section 3.1:
@@ -51,7 +51,8 @@ This mechanism helps in two key ways:
 
 <div align="center"><strong>Figure Re.2: Revised Section 3.2 about the interpretability of FIFR.
 
-<img width="536" alt="image" src="https://github.com/user-attachments/assets/748fac33-4e1e-4f39-8807-7f7e698cacad" /></strong></div>
+<img width="531" alt="image" src="https://github.com/user-attachments/assets/18f52b70-234f-4979-8871-523d3fda16e5" />
+</strong></div>
 
 # Q3:
 Most experimental designs are sound. A possible improvement can be adding larger datasets like ogbn-arxiv.
