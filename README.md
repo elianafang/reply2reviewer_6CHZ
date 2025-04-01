@@ -22,7 +22,7 @@ We sincerely appreciate your careful and insightful comments. Based on your feed
    We acknowledge that this assumption was implicit and will revise the text to state it explicitly. Also, we have now stated more clearly that the condition $\delta_t = 0$ (Eq. 7) is used **as an empirical convergence indicator**, rather than implying formal convergence in all cases.
 
 3. **Clarification on Equation (4) and meaning of *L***:  
-   Thank you for pointing this out. In Equation (4), $L_{\mathbf{h}_{\text{steady}}} = 0$ refers to the **graph Laplacian operator** applied to the steady-state node distribution. That is, if $\mathbf{L} = \mathbf{I} - \mathbf{T}_{\text{sym}}$, then $\mathbf{L} \mathbf{h}_{\text{steady}} = 0$ indicates that $\mathbf{h}_{\text{steady}}$ is in the kernel of the Laplacian, i.e., it is constant over connected components — a standard result in graph diffusion theory. We’ll revise the text to include a clearer definition of $\mathbf{L}$ and this interpretation.
+   Thank you for pointing this out. In Equation (4), $L_{\text{hsteady}} = 0$ refers to the **graph Laplacian operator** applied to the steady-state node distribution. That is, if $\mathbf{L} = \mathbf{I} - T_{\text{sym}}$, then $L_{\mathbf{h}{\text{steady}}} = 0$ indicates that $\text{hsteady}$ is in the kernel of the Laplacian, i.e., it is constant over connected components — a standard result in graph diffusion theory. We’ll revise the text to include a clearer definition of $\mathbf{L}$ and this interpretation.
 
 4. **On the use of $\delta_t = 0$ as an equilibrium indicator**:  
    As you rightly noted, $\delta_t = 0$ does not always imply exact convergence, particularly in edge cases or deterministic processes. In our work, we only use it as a practical stopping criterion to avoid further computational cost when the change in support (non-zero entries) stagnates. We now emphasize that it is a heuristic and does not indicate convergence in the strict mathematical sense.
@@ -51,8 +51,7 @@ This mechanism helps in two key ways:
 
 <div align="center"><strong>Figure Re.2: Revised Section 3.2 about the interpretability of FIFR.
 
-<img width="531" alt="image" src="https://github.com/user-attachments/assets/18f52b70-234f-4979-8871-523d3fda16e5" />
-</strong></div>
+<img width="531" alt="image" src="https://github.com/user-attachments/assets/18f52b70-234f-4979-8871-523d3fda16e5" /></strong></div>
 
 # Q3:
 Most experimental designs are sound. A possible improvement can be adding larger datasets like ogbn-arxiv.
