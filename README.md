@@ -5,7 +5,7 @@
   - Is *t* mistaken for *K*?
   - Why initial state can always converge to steady-state distribution? In fact, consider a deterministic Markov process  
     $p_{11} = 0, p_{12} = 1, p_{21} = 1, p_{22} = 0 \ (w = 0)$  
-    and initial distribution $\{p_1 = 1, p_2 = 0\}$, *it will not approach the steady-state distribution*  
+    and initial distribution $\{p_1 = 1, p_2 = 0\}$, it will not approach the steady-state distribution  
     $p_1 = 0.5, p_2 = 0.5$ as $t \to \infty$.
   - What is *L* in equation 4?
 - $\delta_t = 0$ not necessarily mean that the diffusion process reaches equilibrium and diffusion no longer grows.  
@@ -47,7 +47,7 @@ This mechanism helps in two key ways:
    In many graphs, structural proximity does not always imply semantic similarity. FIFR adjusts the edge-level diffusion strength by learning a routing coefficient (denoted $\gamma_{ij}$) based on feature similarity. This aligns the diffusion process more closely with the task-relevant signals, leading to improved node classification accuracy, especially in heterophilic or noisy graphs.
 
 **Mitigating Over-Diffusion via Routing Constraints**:  
-   Over-diffusion often occurs when information spreads too widely without control, diluting unique node-level features. By prioritizing semantically similar nodes and suppressing redundant or uninformative propagation, FIFR introduces a natural *sparsity and directionality* in the diffusion pattern. This limits feature homogenization and retains meaningful local context, addressing the over-smoothing issue.
+   Over-diffusion often occurs when information spreads too widely without control, diluting unique node-level features. By prioritizing semantically similar nodes and suppressing redundant or uninformative propagation, FIFR introduces a natural sparsity and directionality in the diffusion pattern. This limits feature homogenization and retains meaningful local context, addressing the over-smoothing issue.
 
 <div align="center"><strong>Figure Re.2: Revised Section 3.2 about the interpretability of FIFR.
 
@@ -57,7 +57,7 @@ This mechanism helps in two key ways:
 Most experimental designs are sound. A possible improvement can be adding larger datasets like ogbn-arxiv.
 
 # A3:
-We fully agree that evaluating on larger and more challenging datasets like OGB is important. In response, we attempted to run CGDConv on **OGB-arxiv**, and encountered a critical scalability bottleneck due to the size of the diffusion matrix. Specifically, computing the PPR-based diffusion matrix involves inverting a $169,343 \times 169,343$ adjacency matrix, which requires approximately ****118GB of memory****. This leads to a silent failure on standard hardware: the process terminates without error output, as shown in the attached runtime log (👉**see Figure Re.3**). The Python process exceeds the memory limit, the operating system will directly terminate the process without throwing a Python exception. The "adj matrix over" you  is the last successfully executed step, after which the process is killed by the system.
+We fully agree that evaluating on larger and more challenging datasets like OGB is important. In response, we attempted to run CGDConv on **OGB-arxiv**, and encountered a critical scalability bottleneck due to the size of the diffusion matrix. Specifically, computing the PPR-based diffusion matrix involves inverting a $169,343 \times 169,343$ adjacency matrix, which requires approximately **118GB of memory**. This leads to a silent failure on standard hardware: the process terminates without error output, as shown in the attached runtime log (👉**see Figure Re.3**). The Python process exceeds the memory limit, the operating system will directly terminate the process without throwing a Python exception. The "adj matrix over" you  is the last successfully executed step, after which the process is killed by the system.
 
 **This issue is not specific to our model.** It arises from the matrix inversion operation commonly used in diffusion-based models like GDC and ADC, which are also not scalable to such graph sizes without approximation. We acknowledge that handling large-scale graphs remains a crucial open challenge and plan to investigate efficient and scalable solutions (e.g., sparsified diffusion, Monte Carlo estimation) in future work.  
 
