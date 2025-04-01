@@ -1,5 +1,5 @@
 (Some Figures take time to load)
-# Q1:
+# 🌟Q1:
 
 - In section 3.1:
   - Is *t* mistaken for *K*?
@@ -11,7 +11,7 @@
 - $\delta_t = 0$ not necessarily mean that the diffusion process reaches equilibrium and diffusion no longer grows.  
   For the Markov process above with $1 > w > 0$, it is easy to verify that $K_0 = 0$ but $T^{(k)}$ never converges in a finite time.  $\delta_t = 0$ should only be stated as an empirical metric.
 
-# A1:
+# 🌟A1:
 We sincerely appreciate your careful and insightful comments. Based on your feedback, we have revised Section 3.1 (See Figure Re.1) accordingly and would like to clarify the following points in detail:
 
 1. **On the confusion between *t* and *K***:  
@@ -33,10 +33,10 @@ These revisions clarify the theoretical assumptions and enhance the conceptual p
 
 <img width="590" alt="image" src="https://github.com/user-attachments/assets/700e63dd-08d9-4d1f-b705-9519a2c2e863" /></strong></div>
 
-# Q2:
+# 🌟Q2:
 The authors should discuss more on the influence of FIFR. My intuition is the FIFR increases the diffusion between nodes with similar features. Why it helps increase performance and reduce over-diffusion?
 
-# A2:
+# 🌟A2:
 Thank you for this insightful question regarding the role and effect of Feature Information Flow Routing (FIFR). We have expanded the discussion in our revised manuscript to clarify this component (See Figure Re.2).
 
 FIFR is specifically designed to regulate the structure of the diffusion pathway by dynamically weighting the importance of edges based on feature similarity, rather than purely relying on structural connectivity. Your intuition is correct: FIFR enhances diffusion between nodes with similar features, but importantly, it suppresses diffusion between dissimilar nodes, thereby reducing the chance of irrelevant or noisy message propagation.
