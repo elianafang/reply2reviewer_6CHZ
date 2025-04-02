@@ -52,10 +52,10 @@ FIFR is specifically designed to regulate the structure of the diffusion pathway
 
 This mechanism helps in two key ways:
 
-**Performance Boost through Feature-Aware Routing**:  
+**Performance boost through feature aware**:  
 In many graphs, structural proximity does not always imply semantic similarity. FIFR adjusts the edge-level diffusion strength by learning a routing coefficient (denoted $\gamma_{ij}$) based on feature similarity. This aligns the diffusion process more closely with the task-relevant signals, leading to improved node classification accuracy, especially in heterophilic or noisy graphs.
 
-**Mitigating Over-Diffusion via Routing Constraints**:  
+**Mitigating over-diffusion via routing constraints**:  
 Over-diffusion often occurs when information spreads too widely without control, diluting unique node-level features. By prioritizing semantically similar nodes and suppressing redundant or uninformative propagation, FIFR introduces a natural sparsity and directionality in the diffusion pattern. This limits feature homogenization and retains meaningful local context, addressing the over-smoothing issue.
 
 <div align="center"><strong>Figure Re.2: Revised Section 3.2 about the interpretability of FIFR.
@@ -81,4 +81,4 @@ Font size of Figure 3 should be increased.
 # A4: 
 We appreciate your suggestion regarding Figure 3. Although the figure is presented in vector format—ensuring resolution is preserved regardless of scaling—we acknowledge that the compressed layout and small font size may still have hindered readability during review. Due to space constraints in the main manuscript, we had reduced the font and spacing to maintain flow. 
 
-However, we fully agree with your concern, and in the revised version, we will relocate Figure 3 to the appendix and enlarge its font size and layout for improved clarity and ease of reading.
+We fully agree with your concern, and in the revised version, we have relocated Figure 3 to the appendix and enlarge its font size and layout for improved clarity and ease of reading.
