@@ -1,4 +1,7 @@
+😊We are grateful for your valuable review comments and take this opportunity to address your concerns with careful consideration.
+
 (🕙Some Figures take time to load)
+
 # 🌟Q1:
 
 - In section 3.1:
@@ -12,42 +15,48 @@
   For the Markov process above with $1 > w > 0$, it is easy to verify that $K_0 = 0$ but $T^{(k)}$ never converges in a finite time.  $\delta_t = 0$ should only be stated as an empirical metric.
 
 # 🌟A1:
-We sincerely appreciate your careful and insightful comments. Based on your feedback, we have revised Section 3.1 (👉**see Figure Re.1**) accordingly and would like to clarify the following points in detail:
+We sincerely appreciate your careful and insightful comments. Based on your review comments, we have revised Section 3.1 (👉**see Figure Re.1**) accordingly and would like to clarify the following points in detail:
 
 1. **On the confusion between *t* and *K***:  
-   Thank you for the observation. In Eq. (3), we use $t$ to denote the number of diffusion steps in the general process $\mathbf{h}(t)$, while $K$ represents the maximum diffusion depth (i.e., truncation point). In practice, we compute up to a constrained step $\beta = 2K_0$, derived from an empirical saturation condition. We agree that this could be better clarified in the text and will update the notation to avoid ambiguity between temporal index $t$ and the upper diffusion limit $K$ or $\beta$.
 
-2. **On convergence to steady-state**:  
-   You're absolutely right that *not all* deterministic Markov processes converge to a unique steady-state. In our paper, the statement regarding the convergence is made **under the assumption of stochastic and ergodic random walks** (e.g., personalized PageRank diffusion), where convergence is guaranteed under mild conditions (irreducibility and aperiodicity).  
-   We acknowledge that this assumption was implicit and will revise the text to state it explicitly. Also, we have now stated more clearly that the condition $\delta_t = 0$ (Eq. 7) is used **as an empirical convergence indicator**, rather than implying formal convergence in all cases.
+Thank you for pointing this out. In Eq. (3), we use $t$ to denote the number of diffusion steps in the general process $\mathbf{h}(t)$, while $K$ refers to the diffusion depth, with $K_0$ being the truncation point defined in our method. In practice, we compute up to a constrained step $\beta = 2K_0$, which is derived based on an empirical saturation condition (see Table 4 in the paper). We agree that this distinction should be more clearly articulated in the text, and we have updated the notation in Section 3.1 to avoid any ambiguity (👉 see Figure Re.1).
 
-3. **Clarification on Equation (4) and meaning of *L***:  
-   Thank you for pointing this out. In Equation (4), $\mathbf{L}\_{\mathbf{h}\_{\text{steady}}} = 0$ refers to the **graph Laplacian operator** applied to the steady-state node distribution. That is, if $\mathbf{L} = \mathbf{I} - \mathbf{T}\_{\text{sym}}$, then $\mathbf{L}_{\mathbf{h}\_{\text{steady}}} = 0$ indicates that $\mathbf{h}\_{\text{steady}}$ is in the kernel of the Laplacian, i.e., it is constant over connected components — a standard result in graph diffusion theory. We’ll revise the text to include a clearer definition of $\mathbf{L}$ and this interpretation.
+3. **On convergence to steady-state**:  
 
-4. **On the use of $\delta_t = 0$ as an equilibrium indicator**:  
-   As you rightly noted, $\delta_t = 0$ does not always imply exact convergence, particularly in edge cases or deterministic processes. In our work, we only use it as a practical stopping criterion to avoid further computational cost when the change in support (non-zero entries) stagnates. We now emphasize that it is a heuristic and does not indicate convergence in the strict mathematical sense.
+You're absolutely right that not all deterministic Markov processes converge to a unique steady-state. In our paper, the statement regarding the convergence is made **under the assumption of stochastic and ergodic random walks** (e.g., personalized PageRank diffusion), where convergence is guaranteed under mild conditions (irreducibility and aperiodicity).  
 
-These revisions clarify the theoretical assumptions and enhance the conceptual precision of our approach. They are reflected in Section 3.1 of the revised manuscript (👉**see Figure Re.1**). Once again, thank you for your valuable feedback😊.
+We acknowledge that this assumption was implicit and will revise the text to state it explicitly. Also, we have now stated more clearly that the condition $\delta_t = 0$ (Eq. 7) is used **as an empirical convergence indicator**, rather than implying formal convergence in all cases.
+
+4. **Clarification on Equation (4) and meaning of *L***:  
+
+Thank you for pointing this out. In Equation (4), $\mathbf{L}\_{\mathbf{h}\_{\text{steady}}} = 0$ refers to the **graph Laplacian operator** applied to the steady-state node distribution. That is, if $\mathbf{L} = \mathbf{I} - \mathbf{T}\_{\text{sym}}$, then $\mathbf{L}_{\mathbf{h}\_{\text{steady}}} = 0$ indicates that $\mathbf{h}\_{\text{steady}}$ is in the kernel of the Laplacian, i.e., it is constant over connected components — a standard result in graph diffusion theory. We’ll revise the text to include a clearer definition of $\mathbf{L}$ and this interpretation.
+
+5. **On the use of $\delta_t = 0$ as an equilibrium indicator**:  
+
+As you rightly noted, $\delta_t = 0$ does not always imply exact convergence, particularly in edge cases or deterministic processes. In our work, we only use it as a practical stopping criterion to avoid further computational cost when the change in support (non-zero entries) stagnates. We now emphasize that it is a heuristic and does not indicate convergence in the strict mathematical sense.
+
+These revisions clarify the theoretical assumptions and enhance the conceptual precision of our approach. They are reflected in Section 3.1 of the revised manuscript (👉**see Figure Re.1**). Once again, thank you for your valuable review comments😊.
 
 <div align="center"><strong>Figure Re.1: Revised Section 3.1
 
-<img width="590" alt="image" src="https://github.com/user-attachments/assets/700e63dd-08d9-4d1f-b705-9519a2c2e863" /></strong></div>
+<img width="548" alt="image" src="https://github.com/user-attachments/assets/12e2fe8f-97dd-4092-bee1-cc906bbb54c3" />
+</strong></div>
 
 # 🌟Q2:
 The authors should discuss more on the influence of FIFR. My intuition is the FIFR increases the diffusion between nodes with similar features. Why it helps increase performance and reduce over-diffusion?
 
 # 🌟A2:
-Thank you for this insightful question regarding the role and effect of Feature Information Flow Routing (FIFR). We have expanded the discussion in our revised manuscript to clarify this component (👉**see Figure Re.2**).
+Thank you for this insightful review comments regarding the role and effect of Feature Information Flow Routing (FIFR). We have expanded the discussion in our revised manuscript to clarify this component (👉**see Figure Re.2**).
 
 FIFR is specifically designed to regulate the structure of the diffusion pathway by dynamically weighting the importance of edges based on feature similarity, rather than purely relying on structural connectivity. Your intuition is correct: FIFR enhances diffusion between nodes with similar features, but importantly, it suppresses diffusion between dissimilar nodes, thereby reducing the chance of irrelevant or noisy message propagation.
 
 This mechanism helps in two key ways:
 
 **Performance Boost through Feature-Aware Routing**:  
-   In many graphs, structural proximity does not always imply semantic similarity. FIFR adjusts the edge-level diffusion strength by learning a routing coefficient (denoted $\gamma_{ij}$) based on feature similarity. This aligns the diffusion process more closely with the task-relevant signals, leading to improved node classification accuracy, especially in heterophilic or noisy graphs.
+In many graphs, structural proximity does not always imply semantic similarity. FIFR adjusts the edge-level diffusion strength by learning a routing coefficient (denoted $\gamma_{ij}$) based on feature similarity. This aligns the diffusion process more closely with the task-relevant signals, leading to improved node classification accuracy, especially in heterophilic or noisy graphs.
 
 **Mitigating Over-Diffusion via Routing Constraints**:  
-   Over-diffusion often occurs when information spreads too widely without control, diluting unique node-level features. By prioritizing semantically similar nodes and suppressing redundant or uninformative propagation, FIFR introduces a natural sparsity and directionality in the diffusion pattern. This limits feature homogenization and retains meaningful local context, addressing the over-smoothing issue.
+Over-diffusion often occurs when information spreads too widely without control, diluting unique node-level features. By prioritizing semantically similar nodes and suppressing redundant or uninformative propagation, FIFR introduces a natural sparsity and directionality in the diffusion pattern. This limits feature homogenization and retains meaningful local context, addressing the over-smoothing issue.
 
 <div align="center"><strong>Figure Re.2: Revised Section 3.2 about the interpretability of FIFR.
 
