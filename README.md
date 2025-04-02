@@ -83,4 +83,4 @@ We appreciate your suggestion regarding Figure 3. Although the figure is present
 
 We fully agree with your concern, and in the revised version, we have relocated Figure 3 to the appendix and enlarge its font size and layout for improved clarity and ease of reading.
 
-### 😊We truly appreciate your constructive feedback and hope that our detailed responses and updates will help you reevaluate our work.
+### 😊We truly appreciate your constructive reviews and hope that our detailed responses and updates will help you reevaluate our work.
