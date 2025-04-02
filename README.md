@@ -35,7 +35,7 @@ Thank you for pointing this out. In Equation (4), $\mathbf{L}\_{\mathbf{h}\_{\te
 
 As you rightly noted, $\delta_t = 0$ does not always imply exact convergence, particularly in edge cases or deterministic processes. In our work, we only use it as a practical stopping criterion to avoid further computational cost when the change in support (non-zero entries) stagnates. We now emphasize that it is a heuristic and does not indicate convergence in the strict mathematical sense.
 
-These revisions clarify the theoretical assumptions and enhance the conceptual precision of our approach. They are reflected in Section 3.1 of the revised manuscript (👉**see Figure Re.1**). Once again, thank you for your valuable review comments😊.
+These revisions clarify the theoretical assumptions and enhance the conceptual precision of our method. They are reflected in Section 3.1 of the revised manuscript (👉**see Figure Re.1**). Once again, thank you for your valuable review comments😊.
 
 <div align="center"><strong>Figure Re.1: Revised Section 3.1
 
